@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - Seu Site de Viagens</title>
+  <link href="style2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="hero">
+      <h1>Crie uma conta e comece a viajar!</h1>
+      <form id="signup-form">
+        <input type="text" id="fullname" placeholder="Nome completo" required>
+        <input type="email" id="email" placeholder="E-mail" required>
+        <input type="password" id="password" placeholder="Senha" required>
+        <button type="submit">Criar Conta</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var fullname = document.getElementById('fullname').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+      console.log('Nome:', fullname);
+      console.log('E-mail:', email);
+      console.log('Senha:', password);
+      
+      document.getElementById('signup-form').reset();
+    });
+  </script>
+</body>
+</html>
